@@ -1,0 +1,58 @@
+/* --- Custom Sidebar Background --- */
+.sb-sidenav {
+  background-color: #1e3a8a !important; /* Deep blue */
+}
+
+.sb-sidenav .nav-link,
+.sb-sidenav .sb-sidenav-menu-heading {
+  color: #ffffff !important;
+}
+
+.sb-sidenav .nav-link:hover {
+  background-color: #2563eb !important; /* Lighter blue on hover */
+  color: #fff !important;
+}
+
+.sb-sidenav .sb-nav-link-icon {
+  color: #93c5fd !important;
+}
+
+/* --- Custom Top Navbar Background --- */
+.sb-topnav {
+  background-color: #1e3a8a !important; /* Same color as sidebar */
+  border-bottom: 2px solid #2563eb; /* Optional accent border */
+}
+
+.sb-topnav .navbar-brand {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.sb-topnav .navbar-brand img {
+  height: 50px;
+  margin-right: 8px;
+}
+
+.sb-topnav .nav-link,
+.sb-topnav .navbar-nav .nav-item .nav-link {
+  color: #f1f5f9 !important;
+}
+
+.sb-topnav .nav-link:hover {
+  color: #93c5fd !important;
+}
+
+/* --- Search bar styling --- */
+.sb-topnav .form-control {
+  border: none;
+  border-radius: 20px;
+}
+
+.sb-topnav .btn-primary {
+  background-color: #2563eb;
+  border: none;
+}
+
+.sb-topnav .btn-primary:hover {
+  background-color: #1d4ed8;
+}

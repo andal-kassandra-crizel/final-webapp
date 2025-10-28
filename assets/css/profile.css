@@ -1,0 +1,30 @@
+
+ body {
+    background-color: #f4f6f9;
+ }
+ .sidebar {
+    min-height: 100vh;
+    background: #0d6efd;
+    color: #fff;
+ }
+ .sidebar a {
+    color: #fff;
+    text-decoration: none;
+ }
+ .sidebar a:hover {
+    background: rgba(255,255,255,0.1);
+ }
+ .profile-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+ }
+ .status-badge {
+    font-weight: 500;
+    padding: 0.4em 0.6em;
+    border-radius: 6px;
+    font-size: 0.85em;
+ }
+
+
+
