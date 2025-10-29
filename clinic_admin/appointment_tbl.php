@@ -105,15 +105,24 @@ $appList = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                 <td><?= htmlspecialchars($app['doctor_name']) ?></td>
                                                 <td><?= htmlspecialchars($app['appointment_date']) ?></td>
                                                 <td><span class="badge <?= $badgeClass ?>"><?= $status ?: 'Pending' ?></span></td>
+
                                                 <td>
                                                     <?php if ($status === 'Approved'): ?>
                                                         <button class="btn btn-success btn-sm" disabled>Approved</button>
+
+                                                    <?php elseif ($status === 'Cancelled'): ?>
+                                                        <button class="btn btn-danger btn-sm" disabled title="Cancelled by user — no further actions allowed">Cancelled</button>
+
+                                                    <?php elseif ($status === 'Disapproved'): ?>
+                                                        <button class="btn btn-warning btn-sm text-dark" disabled>Disapproved</button>
+
                                                     <?php else: ?>
                                                         <form method="post" class="d-inline">
                                                             <input type="hidden" name="id" value="<?= $app['appointment_id'] ?>">
                                                             <input type="hidden" name="action" value="approve">
                                                             <button type="submit" class="btn btn-success btn-sm">Approve</button>
                                                         </form>
+
                                                         <button 
                                                             class="btn btn-warning btn-sm" 
                                                             data-bs-toggle="modal" 
@@ -121,6 +130,7 @@ $appList = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                             data-id="<?= $app['appointment_id'] ?>">
                                                             Disapprove
                                                         </button>
+
                                                         <button 
                                                             class="btn btn-danger btn-sm" 
                                                             data-bs-toggle="modal" 
