@@ -20,17 +20,17 @@ Can assign services to specific doctors or categories.
 Displays analytics such as total patients, upcoming appointments, most booked services, etc.
 
 Database Structures
- Account
+ account ------>
  user_id | firstname | middlename | lastname | email | password | role | 
 
- appointments
+ appointments ------>
  appointment_id | user_id | firstname | middlename | lastname | email | age | service_id | doctor_id | appointment date | message |
 
- doctors
+ doctors ------>
  doctor_id | doctor_name | category_id | email | phone | status | 
 
- services
+ services ------>
  service_id | category_id | service_name |
 
- service_categories
+ service_categories ------> 
  category_id | category_name | 
